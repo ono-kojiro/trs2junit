@@ -1,0 +1,20 @@
+trs2junit (0.0.3) unstable; urgency=medium
+
+  * fix typo
+
+ -- Kojiro ONO <ono.kojiro@gmail.com>  Mon, 19 Dec 2022 20:34:42 +0900
+
+trs2junit (0.0.2) unstable; urgency=medium
+
+  * set real-time None if not defined
+
+ -- Kojiro ONO <ono.kojiro@gmail.com>  Mon, 19 Dec 2022 20:28:19 +0900
+
+trs2junit (0.0.1) unstable; urgency=medium
+
+  * first commit
+
+ -- Kojiro ONO <ono.kojiro@gmail.com>  Sun, 18 Dec 2022 20:57:28 +0900
+
+
+
