@@ -127,3 +127,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+Makefile
+Makefile.in
+configure
+*~
+aclocal.m4
+autom4te.cache/
+config.status
+config/
+debbuild/
+debian/
+dest/
+trs2junit
+*.tar.gz
+*.dsc
+*.buildinfo
+*.changes
+*.deb
+

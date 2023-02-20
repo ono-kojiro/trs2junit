@@ -34,8 +34,10 @@ while [ "$#" -ne 0 ] ; do
   shift
 done
 
+TZ=UTC date "+%Y-%m-%dT%H:%M:%S" > ${test_name}.ts
 /usr/bin/time -o ${test_name}.time -p $cmd
 
 echo ":test-name: ${test_name}" >> ${trs_file}
 cat ${test_name}.time | awk '{ print ":" $1 "-time: " $2 }' >> ${trs_file}
+cat ${test_name}.ts   | awk '{ print ":timestamp: " $1 }'    >> ${trs_file}
 
