@@ -1,6 +1,6 @@
 ACLOCAL_AMFLAGS = -I config
 
-bin_SCRIPTS = test_wrapper trs2junit
+bin_SCRIPTS = test_wrapper trs2junit junit2jsonl
 
 EXTRA_DIST = test_wrapper trs2junit.py debian ChangeLog
 
@@ -8,6 +8,9 @@ trs2junit : trs2junit.py
 	cp -f $< $@
 
 SUBDIRS = tests
+
+test :
+	$(MAKE) -C tests test
 
 dpkg :
 	sh mkdebpkg.sh ctrl --package $(PACKAGE_NAME) --version $(PACKAGE_VERSION)

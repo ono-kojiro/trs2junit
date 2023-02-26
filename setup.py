@@ -8,11 +8,12 @@ class BuildCommand(distutils.command.build.build) :
 
 setup(
   name='trs2junit',
-  version='0.0.3',
+  version='0.0.4',
   py_modules=['trs2junit'],
   entry_points={
     'console_scripts':[
       'trs2junit = trs2junit:main',
+      'junit2jsonl = junit2jsonl:main',
     ]
   },
   data_files=[

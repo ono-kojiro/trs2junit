@@ -65,7 +65,7 @@ def main():
         fp = open(output, mode="w", encoding="utf-8")
 
     test_cases = []
-    ts = None
+    timestamp = None
 
     for filepath in args:
         testname = os.path.splitext(os.path.basename(filepath))[0]
@@ -97,10 +97,10 @@ def main():
             real_time = None
 
         if 'timestamp' in record :
-            if ts is None :
-                ts = record['timestamp']
-            elif ts > record['timestamp'] :
-                ts = record['timestamp']
+            if timestamp is None :
+                timestamp = record['timestamp']
+            elif timestamp > record['timestamp'] :
+                timestamp = record['timestamp']
 
         test_case = TestCase(
             record['test-name'],
@@ -113,9 +113,9 @@ def main():
 
         test_cases.append(test_case)
 
-    ts = TestSuite("testsuite", test_cases, timestamp=ts)
+    test_suite = TestSuite("testsuite", test_cases, timestamp=timestamp)
 
-    fp.write(TestSuite.to_xml_string([ts]))
+    fp.write(TestSuite.to_xml_string([test_suite]))
         
     if output != None:
         fp.close()

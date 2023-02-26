@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.71])
-AC_INIT([trs2junit], [0.0.3], [ono.kojiro@gmail.com])
+AC_INIT([trs2junit], [0.0.4], [ono.kojiro@gmail.com])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_SRCDIR([tests/test_simple.c])
 AC_CONFIG_HEADERS([config.h])
