@@ -7,6 +7,8 @@ EXTRA_DIST = test_wrapper trs2junit.py debian ChangeLog
 trs2junit : trs2junit.py
 	cp -f $< $@
 
+SUBDIRS = tests
+
 dpkg :
 	sh mkdebpkg.sh ctrl --package $(PACKAGE_NAME) --version $(PACKAGE_VERSION)
 	$(MAKE) dist
